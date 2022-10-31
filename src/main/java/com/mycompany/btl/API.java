@@ -14,7 +14,7 @@ public class API {
         OkHttpClient client = new OkHttpClient();
         Gson gson = new Gson();
         JsonResult data = null;
-        Request res = new Request.Builder().url("http://api.openweathermap.org/data/2.5/forecast?q=" + "Hanoi" + "&APPID=28980acac41997bea41c8f552f243614&units=metric").build();
+        Request res = new Request.Builder().url("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=28980acac41997bea41c8f552f243614&units=metric").build();
         try {
             Response response = client.newCall(res).execute();
             ResponseBody body = response.body();

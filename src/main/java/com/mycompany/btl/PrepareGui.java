@@ -15,7 +15,7 @@ public class PrepareGui {
 
     public PrepareGui() {
         weather = new Weather_App();
-//        prepare();
+        prepare();
     }
 
     public Weather_App getWeather() {

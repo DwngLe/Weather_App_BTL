@@ -1,6 +1,7 @@
 
 package com.mycompany.btl;
 
+import com.mycompany.btl.*;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -29,7 +30,6 @@ public class Weather_App extends javax.swing.JFrame {
         return pre;
     }
 
-    
     
     public JLabel getjLabel1() {
         return jLabel1;
@@ -95,37 +95,52 @@ public class Weather_App extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dự báo thời tiết");
+        setResizable(false);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Tên thành phố: ");
 
+        lb_temperature.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lb_temperature.setText("Nhiệt độ:");
 
+        lb_country.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lb_country.setText("Đất nước:");
 
-        lb_wind.setText("Tốc độ gió");
+        lb_wind.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_wind.setText("Tốc độ gió:");
 
-        lb_weather.setText("Thời tiết");
+        lb_weather.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_weather.setText("Thời tiết:");
 
+        lb_date.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lb_date.setText("Ngày:");
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        bt_find.setText("Tìm");
+        bt_find.setBackground(null);
+        bt_find.setIcon(new javax.swing.ImageIcon("E:\\Ky_5\\java\\BTL\\Zoom-icon.png")); // NOI18N
+        bt_find.setBorder(null);
         bt_find.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_findActionPerformed(evt);
             }
         });
 
-        next.setText("Trước");
+        next.setBackground(null);
+        next.setForeground(null);
+        next.setIcon(new javax.swing.ImageIcon("E:\\Ky_5\\java\\BTL\\Button-Next-icon (2).png")); // NOI18N
+        next.setBorder(null);
 
-        pre.setText("Sau");
+        pre.setBackground(null);
+        pre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Button-Previous-icon.png"))); // NOI18N
+        pre.setBorder(null);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("DỰ BÁO THỜI TIẾT");
         jLabel2.setToolTipText("");
 
@@ -133,62 +148,67 @@ public class Weather_App extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText("THÔNG TIN");
 
-        lb_city.setText("Thành phố");
+        lb_city.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_city.setText("Thành phố:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_find)
-                .addGap(153, 153, 153))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(pre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(next)
-                .addGap(95, 95, 95))
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lb_date)
                             .addComponent(lb_temperature)
                             .addComponent(lb_wind)
                             .addComponent(lb_weather)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(156, 156, 156)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lb_country)
+                                .addGap(257, 257, 257)
+                                .addComponent(lb_city))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(144, 144, 144)
+                            .addComponent(pre)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(next)
+                            .addGap(1, 1, 1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(14, 14, 14)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel4)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addGap(29, 29, 29)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(231, Short.MAX_VALUE))
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lb_country)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lb_city)
-                        .addGap(199, 199, 199))))
+                        .addGap(540, 540, 540)
+                        .addComponent(bt_find))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(jLabel2)))
+                .addGap(0, 42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(34, 34, 34)
                 .addComponent(jLabel2)
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_find))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(next)
-                    .addComponent(pre))
-                .addGap(22, 22, 22)
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bt_find, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(67, 67, 67)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pre)
+                    .addComponent(next))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -202,7 +222,7 @@ public class Weather_App extends javax.swing.JFrame {
                 .addComponent(lb_weather)
                 .addGap(18, 18, 18)
                 .addComponent(lb_date)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(38, 38, 38))
         );
 
         pack();
@@ -222,6 +242,7 @@ public class Weather_App extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Weather_App().setVisible(true);
+                
             }
         });
 

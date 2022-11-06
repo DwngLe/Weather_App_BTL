@@ -36,7 +36,7 @@ public class PrepareGui {
     }
 
     public void show() {
-        result = API.getJsonData((String) weather.jTextField1.getText());
+//        result = API.getJsonData((String) weather.jTextField1.getText());
         String date = " Ngày: " + result.getList()[idx].getDt_txt();
         String city = " Thành phố: " + result.getCity().getName();
         String nation = " Quốc gia: " + result.getCity().getCountry();
@@ -62,9 +62,9 @@ public class PrepareGui {
             String command = ae.getActionCommand();
             if (command.equals("find")) {
                 find();
-                if(result==null){
-                JOptionPane.showMessageDialog(weather, "Không tìm thấy thành phố");
-            }
+                if(null==result.getList()){
+                    JOptionPane.showMessageDialog(weather, "Tên thành phố không hợp lệ hoặc không tìm thấy");
+                }
                 idx = 0;
             } else if (command.equals("next")) {
                if(idx == 39){
@@ -87,7 +87,7 @@ public class PrepareGui {
 
         public void find() {
            
-            result = API.getJsonData((String) weather.jTextField1.getText());
+                result = API.getJsonData((String) weather.jTextField1.getText());
             
         }
     }

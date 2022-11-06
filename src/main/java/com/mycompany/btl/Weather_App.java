@@ -122,8 +122,7 @@ public class Weather_App extends javax.swing.JFrame {
             }
         });
 
-        bt_find.setBackground(null);
-        bt_find.setIcon(new javax.swing.ImageIcon("E:\\Ky_5\\java\\BTL\\Zoom-icon.png")); // NOI18N
+        bt_find.setText("FIND");
         bt_find.setBorder(null);
         bt_find.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,13 +130,10 @@ public class Weather_App extends javax.swing.JFrame {
             }
         });
 
-        next.setBackground(null);
-        next.setForeground(null);
-        next.setIcon(new javax.swing.ImageIcon("E:\\Ky_5\\java\\BTL\\Button-Next-icon (2).png")); // NOI18N
+        next.setText("NEXT");
         next.setBorder(null);
 
-        pre.setBackground(null);
-        pre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Button-Previous-icon.png"))); // NOI18N
+        pre.setText("PRE");
         pre.setBorder(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -171,9 +167,9 @@ public class Weather_App extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(144, 144, 144)
-                            .addComponent(pre)
+                            .addComponent(pre, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(next)
+                            .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(1, 1, 1))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(14, 14, 14)
@@ -188,11 +184,11 @@ public class Weather_App extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(540, 540, 540)
-                        .addComponent(bt_find))
+                        .addComponent(bt_find, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(141, 141, 141)
                         .addComponent(jLabel2)))
-                .addGap(0, 42, Short.MAX_VALUE))
+                .addGap(0, 64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,14 +197,14 @@ public class Weather_App extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bt_find, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bt_find, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pre)
-                    .addComponent(next))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                    .addComponent(pre, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

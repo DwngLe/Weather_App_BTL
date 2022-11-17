@@ -88,6 +88,12 @@ public class Weather_App extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lb_city = new javax.swing.JLabel();
+        lb_temperature_min = new javax.swing.JLabel();
+        lb_temperature_feels = new javax.swing.JLabel();
+        lb_temperature_max = new javax.swing.JLabel();
+        lb_sea_level = new javax.swing.JLabel();
+        lb_humidity = new javax.swing.JLabel();
+        lb_clouds = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
 
@@ -147,6 +153,24 @@ public class Weather_App extends javax.swing.JFrame {
         lb_city.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lb_city.setText("Thành phố:");
 
+        lb_temperature_min.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_temperature_min.setText("Nhiệt độ thấp nhất:");
+
+        lb_temperature_feels.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_temperature_feels.setText("Nhiệt độ cảm nhận được:");
+
+        lb_temperature_max.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_temperature_max.setText("Nhiệt độ cao nhất:");
+
+        lb_sea_level.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_sea_level.setText("Mực nước:");
+
+        lb_humidity.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_humidity.setText("Độ ẩm:");
+
+        lb_clouds.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lb_clouds.setText("Mây:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -154,16 +178,37 @@ public class Weather_App extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lb_date)
-                            .addComponent(lb_temperature)
-                            .addComponent(lb_wind)
-                            .addComponent(lb_weather)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lb_country)
-                                .addGap(257, 257, 257)
-                                .addComponent(lb_city))))
+                        .addGap(540, 540, 540)
+                        .addComponent(bt_find, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(jLabel2)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(lb_country)
+                            .addGap(257, 257, 257)
+                            .addComponent(lb_city))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lb_temperature)
+                                .addComponent(lb_temperature_min)
+                                .addComponent(lb_temperature_max)
+                                .addComponent(lb_temperature_feels))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lb_weather)
+                                .addComponent(lb_wind)
+                                .addComponent(lb_sea_level))))
+                    .addGap(143, 143, 143)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lb_humidity)
+                        .addComponent(lb_clouds))
+                    .addContainerGap(356, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(144, 144, 144)
@@ -174,21 +219,15 @@ public class Weather_App extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addGap(14, 14, 14)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addGap(60, 60, 60)
+                                    .addComponent(lb_date))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(540, 540, 540)
-                        .addComponent(bt_find, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel2)))
-                .addGap(0, 64, Short.MAX_VALUE))
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addContainerGap(519, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,21 +243,31 @@ public class Weather_App extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pre, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lb_date))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lb_country)
-                    .addComponent(lb_city))
+                    .addComponent(lb_city)
+                    .addComponent(lb_humidity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lb_temperature)
-                .addGap(12, 12, 12)
-                .addComponent(lb_wind)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lb_weather)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb_temperature)
+                    .addComponent(lb_wind)
+                    .addComponent(lb_clouds))
                 .addGap(18, 18, 18)
-                .addComponent(lb_date)
-                .addGap(38, 38, 38))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb_weather)
+                    .addComponent(lb_temperature_min))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb_temperature_max)
+                    .addComponent(lb_sea_level))
+                .addGap(18, 18, 18)
+                .addComponent(lb_temperature_feels)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -253,9 +302,15 @@ public class Weather_App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JLabel lb_city;
+    public javax.swing.JLabel lb_clouds;
     public javax.swing.JLabel lb_country;
     public javax.swing.JLabel lb_date;
+    public javax.swing.JLabel lb_humidity;
+    public javax.swing.JLabel lb_sea_level;
     public javax.swing.JLabel lb_temperature;
+    public javax.swing.JLabel lb_temperature_feels;
+    public javax.swing.JLabel lb_temperature_max;
+    public javax.swing.JLabel lb_temperature_min;
     public javax.swing.JLabel lb_weather;
     public javax.swing.JLabel lb_wind;
     private javax.swing.JButton next;

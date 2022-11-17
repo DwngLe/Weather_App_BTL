@@ -3,9 +3,18 @@ package com.mycompany.btl;
 public class Daily {
     private Main main;
     private Weather[] weather;
-//    private Clouds clouds;
+    private Clouds clouds;
     private Wind wind;
     private String dt_txt;
+//    private Visibility visibility;
+
+//    public Visibility getVisibility() {
+//        return visibility;
+//    }
+//
+//    public void setVisibility(Visibility visibility) {
+//        this.visibility = visibility;
+//    }
 
     public Daily(Main main, Weather[] weather, Wind wind, String dt_txt) {
         this.main = main;
@@ -13,6 +22,14 @@ public class Daily {
 //        this.clouds = clouds;
         this.wind = wind;
         this.dt_txt = dt_txt;
+    }
+
+    public Clouds getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
     }
 
     public Main getMain() {

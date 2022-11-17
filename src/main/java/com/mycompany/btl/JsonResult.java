@@ -13,6 +13,7 @@ public class JsonResult {
     private int cnt;
     private Daily[] list;
     private City city;
+ 
 
     public JsonResult() {
     }

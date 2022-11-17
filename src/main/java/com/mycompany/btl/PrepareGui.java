@@ -42,18 +42,32 @@ public class PrepareGui {
         String nation = " Quốc gia: " + result.getCity().getCountry();
         String weath = " Thời tiết: " + result.getList()[idx].getWeather()[0].getDescription();
         String nhietDo = " Nhiệt độ: " + result.getList()[idx].getMain().getTemp() + " độ C";
-//        String apXuat = " Ap xuất: " + result.getList()[idx].getMain().getPresure();
-//        String doAm = " Độ ẩm: " + result.getList()[idx].getMain().getHumidity();
-        String winSpeed = " Tốc độ gió: " + result.getList()[idx].getWind().getSpeed();
-//        String clouds = " Mây: " + result.getList()[idx].getClouds().getAll() + "%";
-
+        String apXuat = " Ap xuất: " + result.getList()[idx].getMain().getPressure();
+        String doAm = " Độ ẩm: " + result.getList()[idx].getMain().getHumidity() + "%";
+        String winSpeed = " Tốc độ gió: " + result.getList()[idx].getWind().getSpeed() + "km/h";
+        String clouds = " Mây: " + result.getList()[idx].getClouds().getAll() + "%";
+        String nhietDo_min = "Nhiệt độ thấp nhất: " + result.getList()[idx].getMain().getTemp_min() + "độ C";
+        String nhietDo_max = "Nhiệt độ cao nhất: " + result.getList()[idx].getMain().getTemp_max() + "độ C";
+        String nhietDo_thuc = "Nhiệt độ cảm nhận bên ngoài: " + result.getList()[idx].getMain().getFeels_like() + "độ C";
+        String muc_nuoc = "Mực nước biển: " + result.getList()[idx].getMain().getSea_level() + "chưa biết là m hay cm";
+//        String tam_nhin = "Tầm nhìn: " + Integer.(result.getList()[idx].getVisibility() + "m");
+        
+        
         weather.lb_country.setText(nation);
         weather.lb_temperature.setText(nhietDo);
         weather.lb_date.setText(date);
         weather.lb_wind.setText(winSpeed);
         weather.lb_weather.setText(weath);
         weather.lb_city.setText(city);
-    }
+        weather.lb_clouds.setText(clouds);
+        weather.lb_temperature_feels.setText(nhietDo_thuc);
+        weather.lb_temperature_min.setText(nhietDo_min);
+        weather.lb_temperature_max.setText(nhietDo_max);
+        weather.lb_sea_level.setText(muc_nuoc);
+        weather.lb_humidity.setText(doAm);
+//        weather.lb_visibility.setText(tam_nhin);
+        
+  }
 
     public class ButtonClick implements ActionListener {
 
@@ -62,17 +76,17 @@ public class PrepareGui {
             String command = ae.getActionCommand();
             if (command.equals("find")) {
                 find();
-                if(null==result.getList()){
+                if (null == result.getList()) {
                     JOptionPane.showMessageDialog(weather, "Tên thành phố không hợp lệ hoặc không tìm thấy");
                 }
                 idx = 0;
             } else if (command.equals("next")) {
-               if(idx == 39){
-                   idx = idx;
-                   JOptionPane.showMessageDialog(weather, "Không có thông tin mới hơn");
-               }else{
-                   idx++;
-               }
+                if (idx == 39) {
+                    idx = idx;
+                    JOptionPane.showMessageDialog(weather, "Không có thông tin mới hơn");
+                } else {
+                    idx++;
+                }
             } else if (command.equals("pre")) {
                 if (idx == 0) {
                     idx = idx;
@@ -86,9 +100,9 @@ public class PrepareGui {
         }
 
         public void find() {
-           
-                result = API.getJsonData((String) weather.jTextField1.getText());
-            
+
+            result = API.getJsonData((String) weather.jTextField1.getText());
+
         }
     }
 }

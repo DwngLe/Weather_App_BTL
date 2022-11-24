@@ -11,7 +11,7 @@ public class Weather_App extends javax.swing.JFrame {
 //    public Weather_App weather;
 //    public JsonResult result;
 //    public ArrayList<Weather> listResult;
-//    public int idx = 0; 
+//    public int idx = 0 
 //    
     
     public Weather_App() {
